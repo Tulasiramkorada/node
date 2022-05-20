@@ -1,0 +1,31 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/product.css">
+</head>
+
+
+<body>
+  <%  include('includes/navigation.ejs') %>
+ <main>
+        <% if (prods.length > 0) { %>
+           <div class="grid">
+        <% for (lets product of prods) { %>
+         <article class="card product-item">
+         <header class="card__header">
+            <h1 class="product__title">Greate Book</h1>
+         </header>
+         <div class="card__image">
+             <img src="https://image.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="A Book"> 
+         </div>
+         <div class="card__content">
+             <h2 class="product__price">$19.99</h2>
+             <p class="product__description">A very intersting book about the many to use of the people</p>
+         </div>
+         <div class="card-actions">
+             <button class="btn">Add to cart</button>
+         </div>
+        </article>
+     </div>
+     <% } %>
+    </main>
+</body>
+</html>
